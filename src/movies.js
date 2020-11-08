@@ -35,9 +35,32 @@ function dramaMoviesRate(movies) {
   });
   return ratesAverage(dramaMovies);
 }
+/*
+const sortedCars = [ ...cars ];
 
+sortedCars.sort((a, b) => {
+  if (a.weight < b.weight) {
+    return -1;
+  } else {
+    return 1;
+  }
+});*/
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
-
+// could not figiure out the last step of sorting alphabetically
+function orderByYear(movies) {
+  const sortedMovies = [...movies];
+  sortedMovies.sort((a, b) => {
+    //   if (a.year === b.year){
+    //       return a.localeCompare(b)
+    //   }
+    if (a.year < b.year) {
+      return -1;
+    } else {
+      return 1;
+    }
+  });
+  return sortedMovies;
+}
 // Iteration 6: Alphabetic Order - Order by title and print the first 20 titles
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
