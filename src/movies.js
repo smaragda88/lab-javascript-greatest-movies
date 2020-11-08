@@ -15,9 +15,7 @@ function howManyMovies(movies) {
   });
   return StevenSpielbergMovies.length;
 }
-
 // Iteration 3: All rates average - Get the average of all rates with 2 decimals
-
 // TEST "Return average even if one of the movies does not have rate" still fails could not figure out how to fix that
 function ratesAverage(movies) {
   let total = 0;
@@ -30,6 +28,13 @@ function ratesAverage(movies) {
 }
 
 // Iteration 4: Drama movies - Get the average of Drama Movies
+
+function dramaMoviesRate(movies) {
+  const dramaMovies = movies.filter((movies) => {
+    return movies.genre.includes('Drama');
+  });
+  return ratesAverage(dramaMovies);
+}
 
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
 
