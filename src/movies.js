@@ -17,33 +17,18 @@ function howManyMovies(movies) {
 }
 
 // Iteration 3: All rates average - Get the average of all rates with 2 decimals
-// function ratesAverage(movies) {
-//   const averageRate = movies.reduce(function (average, movie, a, list) {
-//     average + movie.rate / list.length;
-//   }, 0);
-//   return averageRate;
-// }
 
+// TEST "Return average even if one of the movies does not have rate" still fails could not figure out how to fix that
 function ratesAverage(movies) {
-  let mappedList = movies.map((x) => x.rate);
-  let numberedList = mappedList.map(Number);
-  let totalRating = numberedList.reduce((total, rating) => total + rating);
-  let avarageRating = totalRating / numberedList.length;
-  return avarageRating;
+  let total = 0;
+  if (!movies.length) {
+    return 0;
+  }
+  movies.map((x) => (total += x.rate));
+  let average = total / movies.length;
+  return Math.round(average * 100) / 100;
 }
 
-// const averageYearOfPurchaseOfOldHeavyCars = cars
-//   .filter(function (car) {
-//     return car.weight >= 0.8 && car.year <= 2016;
-//   })
-//   .map(function (car) {
-//     return car.year;
-//   })
-//   .reduce(function (accumulator, year, index, list) {
-//     return accumulator + year / list.length;
-//   }, 0);
-
-// console.log(averageYearOfPurchaseOfOldHeavyCars);
 // Iteration 4: Drama movies - Get the average of Drama Movies
 
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
