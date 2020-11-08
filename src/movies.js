@@ -35,16 +35,7 @@ function dramaMoviesRate(movies) {
   });
   return ratesAverage(dramaMovies);
 }
-/*
-const sortedCars = [ ...cars ];
 
-sortedCars.sort((a, b) => {
-  if (a.weight < b.weight) {
-    return -1;
-  } else {
-    return 1;
-  }
-});*/
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
 // could not figiure out the last step of sorting alphabetically
 function orderByYear(movies) {
